@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Boston Data To Predict 'Price'</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="color: blanchedalmond; text-align: center;">Predict The Price Of Car</h1>
+    <h3  style="color: blanchedalmond; text-align: center;">Machine Learning Model</h3>
+    <div class="form">
+        <form action="/predict" method="POST">
+            <br/>
+            <h4>Enter Weelbase of car</h4>
+            <input type="number" step="any" class="form-control" id="wheelbase" name="wheelbase" required="required">
+            <br/>
+            <h4>Enter Width of car</h4>
+            <input type="number" step="any" class="form-control" id="carwidth" name="carwidth" required="required">
+            <br/>
+            <h4>Enter Size of car</h4>
+            <input type="number" step="any" class="form-control" id="enginesize" name="enginesize" required="required">
+            <br/>
+            <h4>Enter Bore-Stroke Ratio of car</h4>
+            <input type="number" step="any" class="form-control" id="boreratio" name="boreratio" required="required">
+            <br/>
+            <h4>How much power an engine produces</h4>
+            <input type="number" step="any" class="form-control" id="horsepower" name="horsepower" required="required">
+            <br/>
+            <h4>Enter Your Car Name</h4>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="carname">
+                <option value="toyota">toyota</option>
+                <option value="nissan">nissan</option>
+                <option value="mazda">mazda</option>
+                <option value="honda">honda</option>
+                <option value="subaru">subaru</option>
+                <option value="volvo">volvo</option>
+                <option value="dodge">dodge</option>
+                <option value="bmw">bmw</option>
+                <option value="audi">audi</option>
+                <option value="saab">saab</option>
+                <option value="isuzu">isuzu</option>
+                <option value="jaguar">jaguar</option>
+                <option value="maxda">maxda</option>
+                <option value="toyouta">toyouta</option>
+            </select>
+            <h4>What is the Fuel type?</h4>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="fueltype">
+                <option value="diesel">diesel</option>
+                <option value="gas">gas</option>
+            </select>
+            <h4>What Kind Of Aspiration used in a car?</h4>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="aspiration">
+                <option value="turbo">turbo</option>
+                <option value="std">std</option>
+            </select>
+            <h4>How Many Number of doors in a car?</h4>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="doornumber">
+                <option value="four">four</option>
+                <option value="two">two</option>
+            </select>
+            <h4>Which type of drive wheel in a car?</h4>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="drivewheel">
+                <option value="fwd">fwd</option>
+                <option value="rwd">rwd</option>
+                <option value="other">other</option>
+            </select>
+            <h4>Where your car engine located?</h4>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="enginelocation">
+                <option value="rear">rear</option>
+                <option value="front">front</option>
+            </select>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
