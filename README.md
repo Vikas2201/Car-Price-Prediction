@@ -27,4 +27,4 @@ https://user-images.githubusercontent.com/76476273/121396285-d4e17e80-c970-11eb-
 # Members :
 
 [@Abhijeet Singh](https://github.com/abhijeetSingh131)
-[@Vikas]
+[@Vikas](https://github.com/Vikas2201)
